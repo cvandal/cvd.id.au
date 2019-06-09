@@ -1,0 +1,140 @@
+/*
+    navy    = 001f3f
+    blue    = 0074d9
+    aqua    = 7fdbff
+    teal    = 39cccc
+    olive   = 3d9970
+    green   = 2ecc40
+    lime    = 01ff70
+    yellow  = ffdc00
+    orange  = ff851b
+    red     = ff4136
+    maroon  = 85144b
+    fuchsia = f012be
+    purple  = b10Dc9
+    black   = 111111
+    gray    = aaaaaa
+    silver  = dddddd
+    white   = ffffff
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+}
+
+h1 a, h1 a:hover {
+    color: #fff !important;
+}
+
+a, a:visited, a:hover, a:active {
+    color: #7fdbff;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+article, .sidebar {
+    padding-bottom: 50px;
+}
+
+code, pre code {
+    color: #7fdbff;
+}
+
+button:active, button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.me {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    max-height: 300px;
+}
+
+.about {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.about .fab, .about .far, .about .fas {
+    font-size: 2em;
+    padding: 0 10px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.navbar-brand {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    background-color: #7fdbff;
+}
+
+.tag:hover, .read-more:hover {
+    background-color: #fff;
+}
+
+.tag a, .read-more a {
+    color: #111;
+}
+
+.summary, .content {
+    margin-top: 50px;
+}
+
+.pagination li.active a {
+    background-color: #7fdbff !important;
+    border-color: #7fdbff !important;
+}
+
+.pagination li a:hover {
+    background-color: #111 !important;
+    color: #fff;
+    border-color: #111 !important;
+}
+
+.list-group-item {
+    padding-left: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.badge {
+    background-color: #7fdbff;
+    color: #111;
+}
+
+.post-image img {
+    display: block;
+    margin: 0 auto;
+}

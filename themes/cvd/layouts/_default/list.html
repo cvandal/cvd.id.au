@@ -1,0 +1,51 @@
+{{ define "main" }}
+    {{- partial "header.html" . -}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+                {{ range $paginator.Pages }}
+                    <article>
+                        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                        
+                        <p><i class="far fa-calendar-alt fa-fw"></i> <span class="date">{{ .Date.Format "January 2, 2006" }}</span></p>
+                        <p><i class="fas fa-tags fa-fw"></i> {{ range .Params.Tags }} <span class="badge tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span> {{ end }}</p>
+                        
+                        <div class="summary">
+                            {{ if .Params.PostSummary }}
+                                {{ .Params.PostSummary | markdownify }}
+                            {{ else }}
+                                {{ .Summary }}
+                            {{ end}}
+
+                            {{ if .Truncated }}
+                                <div class="badge read-more">
+                                    <a href="{{ .RelPermalink }}">Read more <i class="fas fa-arrow-right fa-fw"></i></a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    </article>
+                {{ end }}
+
+                {{ template "_internal/pagination.html" . }}
+            </div>
+
+            <div class="col-sm-3">
+                <div class="sidebar">
+                    <h1>Recent Posts</h1>
+                    <ul class="list-group">
+                        {{ range first 5 .Pages}}
+                            <li class="list-group-item"><i class="fas fa-arrow-right fa-fw"></i> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+
+                    <h1>Tags</h1>
+                    {{ range .Site.Taxonomies.tags }}
+                        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="badge">{{ .Count }}</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

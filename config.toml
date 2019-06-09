@@ -1,0 +1,4 @@
+baseURL = "https://cvd.id.au/"
+languageCode = "en-us"
+title = "Chris van Dal"
+theme = "cvd"
