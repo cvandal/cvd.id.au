@@ -125,7 +125,7 @@ draft: false
 
 22. Start the `dhcpcd` service: `sudo systemctl start dhcpcd`
 
-23. Install must-have packages: `sudo pacman -Syu xf86-video-fbdev xf86-video-intel mesa lib32-mesa xorg sddm plasma asciinema bash-completion bluez bluez-utils cura dnsutils docker dolphin ark firefox freerdp git go gwenview htop jq kate kcalc kdeconnect kompare kfind konsole krdc ksysguard ksystemlog kwalletmanager lutris networkmanager networkmanager-openvpn nfs-utils nodejs npm okular openssh partitionmanager peek pinta powerline powerline-fonts python-pip spectacle steam tmux transmission-qt ttf-bitstream-vera ttf-liberation unzip vim virtualbox virtualbox-guest-iso vlc wget wine-staging winetricks xterm`
+23. Install must-have packages: `sudo pacman -Syu intel-ucode xf86-video-fbdev xf86-video-intel mesa lib32-mesa xorg sddm plasma asciinema bash-completion bluez bluez-utils cura dnsutils docker dolphin ark firefox freerdp git go gwenview htop jq kate kcalc kdeconnect kompare kfind konsole krdc ksysguard ksystemlog kwalletmanager lutris networkmanager networkmanager-openvpn nfs-utils nodejs npm okular openssh partitionmanager peek pinta powerline powerline-fonts python-pip spectacle steam tmux transmission-qt ttf-bitstream-vera ttf-liberation unzip vim virtualbox virtualbox-guest-iso vlc wget wine-staging winetricks xterm`
 
 24. Enable the `sddm` service: `sudo systemctl enable sddm`
 
@@ -191,7 +191,26 @@ draft: false
     set completion-ignore-case on
     ```
 
-5. Configure `powerline`:
+5. Configure VIM
+    1. `mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
+
+    2. `git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+
+    3. `git clone git://github.com/OmniSharp/omnisharp-vim.git ~/.vim/bundle/omnisharp-vim`
+
+    4. `vim ~/.vimrc` and add the following content:
+
+        ```
+        execute pathogen#infect()
+        syntax on
+        filetype plugin indent on
+
+        autocmd vimenter * NERDTree
+
+        let g:OmniSharp_start_server = 0
+        ```
+
+6. Configure `powerline`:
     1. `mkdir -p ~/.config/powerline`
 
     2. `touch ~/.config/powerline/config.json`
@@ -208,6 +227,6 @@ draft: false
         }
         ```
 
-6. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lastpass`
+7. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lastpass`
 
 {{< figure class="post-image" src="/images/arch.jpg" width="300px" >}}
