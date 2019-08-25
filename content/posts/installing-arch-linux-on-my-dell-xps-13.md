@@ -166,7 +166,7 @@ draft: false
 
     3. `makepkg -si`
 
-2. Install must-have packages (cont) (aur): `yay -Syu slack-desktop discord zoom dropbox onedrive-abraunegg mono msbuild-stable dotnet-sdk powershell-bin visual-studio-code-bin rider azuredatastudio postman-bin github-desktop-bin`
+2. Install must-have packages (cont) (aur): `yay -Syu ttf-ms-fonts slack-desktop discord zoom dropbox onedrive-abraunegg mono msbuild-stable dotnet-sdk powershell-bin visual-studio-code-bin rider azuredatastudio postman-bin github-desktop-bin`
 
 3. Configure the bash startup file `.bashrc` by adding the following lines to `~/.bashrc`:
 
@@ -227,6 +227,6 @@ draft: false
         }
         ```
 
-7. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lastpass`
+7. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lockwise`
 
 {{< figure class="post-image" src="/images/arch.jpg" width="300px" >}}
