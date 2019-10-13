@@ -43,7 +43,7 @@ draft: false
 
 ## Terraform
 
-```
+```hcl
 provider "aws" {
     region     = "ap-southeast-2"
     access_key = "${var.primary_aws_access_key}"
@@ -395,7 +395,8 @@ resource "aws_route53_record" "route53_record" {
 1. Enable Let's Encrypt
 
 2. Enable HTTP Strict Transport Security:
-    ```
+
+    ```powershell
     & "C:\Program Files\Octopus Deploy\Octopus\Octopus.Server.exe" configure --instance="OctopusServer" --webForceSSL="True"
     & "C:\Program Files\Octopus Deploy\Octopus\Octopus.Server.exe" configure --hstsEnabled=true --hstsMaxAge=31556926
     ```

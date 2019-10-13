@@ -2,24 +2,6 @@
 title: "AWS and Azure Dependency Injection with .NET Core"
 date: 2019-06-23T18:12:47+10:00
 tags: ["AWS", "Azure", ".NET Core"]
-postSummary: >
-    ## Install Packages
-
-    From the root directory of your project, run the following commands to install the prerequisite packages:
-
-
-    `dotnet add package AWSSDK.Extensions.NETCore.Setup`
-
-
-    `dotnet add package AWSSDK.EC2`
-
-
-    `dotnet add package Microsoft.Azure.Management.Fluent`
-    
-
-    ## App Configuration
-
-    Add the following JSON objects to `appsettings.json` and `appsettings.Development.json` and then set the values accordingly:
 draft: false
 ---
 
@@ -60,6 +42,8 @@ Call `ConfigureAppConfiguration` from the `WebHost.CreateDefaultBuilder` method 
     config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true, reloadOnChange: true);
 })
 ```
+
+<!--more-->
 
 ## Register Services
 

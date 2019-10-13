@@ -2,33 +2,6 @@
 title: "Installing Arch Linux on my Dell XPS 13"
 date: 2019-06-01T15:46:14+10:00
 tags: ["Arch", "Linux", "Dell"]
-postSummary: >
-    ## Phase 1
-
-    1. Update the system clock: `timedatectl set-ntp true`
-
-
-    2. Partition the disk:
-        1. `cfdisk /dev/nvme0n1`
-
-        2. Delete any pre-existing partitions
-
-        3. Create the first partition with a size of `512M` and a type of `EFI System`
-
-        4. Create the second partition with a size of `4G` and a type of `Linux Swap`
-
-        5. Create the third partition utilising the remaining disk space and a type of `Linux Filesystem`
-
-    3. Format the partitions and enable swap:
-        1. `mkfs.fat -F32 /dev/nvme0n1p1`
-
-        2. `mkswap /dev/nvme0n1p2`
-
-        3. `swapon /dev/nvme0n1p2`
-
-        4. `mkfs.ext4 /dev/nvme0n1p3`
-
-    4. Mount the file system: `mount /dev/nvme0n1p3 /mnt`
 draft: false
 ---
 
@@ -60,14 +33,14 @@ draft: false
 
 5. Enable the `multilib` repository by uncommenting the following lines in `/etc/pacman.conf`:
 
-    ```
+    ```bash
     #[multilib]
     #Include = /etc/pacman.d/mirrorlist
     ```
 
 6. Install the `base` and `base-devel` packages: `pacstrap /mnt base base-devel`
 
-7. Generate an fstab file: `genfstab -U /mnt >> /mnt/etc/fstab`
+7. Generate an fstab file: `genfstab -U /mnt >> /mnt/etc/fstab`<!--more-->
 
 8. Change root into the new system: `arch-chroot /mnt`
 
@@ -170,7 +143,7 @@ draft: false
 
 3. Configure the bash startup file `.bashrc` by adding the following lines to `~/.bashrc`:
 
-    ```
+    ```bash
     powerline-daemon -q
 
     export GOPATH=$HOME/go
@@ -187,7 +160,7 @@ draft: false
 
 4. Configure the bash startup file `.inputrc` by adding the following lines to `~/.inputrc`:
 
-    ```
+    ```bash
     set completion-ignore-case on
     ```
 
@@ -200,7 +173,7 @@ draft: false
 
     4. `vim ~/.vimrc` and add the following content:
 
-        ```
+        ```bash
         execute pathogen#infect()
         syntax on
         filetype plugin indent on
@@ -217,7 +190,7 @@ draft: false
 
     3. Show the git branch in powerline by adding the following lines to `~/.config/powerline/config.json`:
 
-        ```
+        ```json
         {
           "ext": {
             "shell": {
