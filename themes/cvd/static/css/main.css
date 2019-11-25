@@ -44,7 +44,7 @@ a:hover {
 }
 
 article {
-    padding: 0 0 100px 100px;
+    padding: 0 0 100px 0;
 }
 
 code, pre code {
@@ -87,20 +87,39 @@ button:active, button:focus {
 }
 
 .navbar {
-    margin-bottom: 50px;
+    padding: 25px 0 15px 0;
+    background-color: #111111;
 }
 
-.navbar-brand {
-    font-family: 'Amatic SC', cursive;
-    font-size: 4em;
-    color: #fff !important;
+.navbar h1 {
+    margin-top: 15px;
 }
 
 .navbar-toggler {
     background-color: #7fdbff;
 }
 
+@media only screen and (min-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.sidebar {
+    display: block;
+}
+
 .sidebar ul {
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.tags {
     margin-bottom: 50px;
 }
 
