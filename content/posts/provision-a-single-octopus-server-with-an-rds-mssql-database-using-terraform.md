@@ -2,42 +2,6 @@
 title: "Provision a single Octopus server with an RDS MSSQL database using Terraform"
 date: 2019-06-11T19:22:37+10:00
 tags: ["Octopus", "RDS", "Terraform"]
-postSummary: >
-    ## Terraform
-    
-    ```
-
-    provider "aws" {
-        region     = "ap-southeast-2"
-        access_key = "${var.primary_aws_access_key}"
-        secret_key = "${var.primary_aws_secret_key}"
-    }
-
-
-    provider "aws" {
-        alias      = "cvd"
-        region     = "ap-southeast-2"
-        access_key = "${var.secondary_aws_access_key}"
-        secret_key = "${var.secondary_aws_secret_key}"
-    }
-
-
-    data "aws_ami" "ami" {
-        most_recent = true
-        owners      = ["801119661308"]
-
-        filter {
-            name   = "name"
-            values = ["Windows_Server-2019-English-Core-Base-*"]
-        }
-
-        filter {
-            name   = "virtualization-type"
-            values = ["hvm"]
-        }
-    }
-    
-    ```
 draft: false
 ---
 
@@ -71,7 +35,11 @@ data "aws_ami" "ami" {
         values = ["hvm"]
     }
 }
+```
 
+<!--more-->
+
+```hcl
 resource "aws_vpc" "vpc" {
     cidr_block           = "10.0.0.0/16"
     enable_dns_support   = true

@@ -41,7 +41,7 @@ draft: false
     country=AU
 
     network={
-        ssid="Pretty Fly For A WiFi"
+        ssid="<ssid>"
         psk="<password>"
         key_mgmt=WPA-PSK
     }

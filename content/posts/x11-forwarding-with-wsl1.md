@@ -7,7 +7,7 @@ draft: false
 
 ## On Windows
 
-1. Install and run `VcXsrv Windows X Server`: [https://sourceforge.net/projects/vcxsrv/](https://sourceforge.net/projects/vcxsrv/)
+1. Download, install and then run `VcXsrv Windows X Server`: [https://sourceforge.net/projects/vcxsrv/](https://sourceforge.net/projects/vcxsrv/)
 
 ## On WSL
 

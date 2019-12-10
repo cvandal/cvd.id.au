@@ -86,7 +86,7 @@ draft: false
 
 16. Add a new local user: `useradd -m -g wheel -s /bin/bash chris`
 
-17. Set the password for the new local user: `passwd chris`
+17. Set the password for the new local user: `passwd <username>`
 
 18. Uncomment `#%wheel ALL=(ALL) ALL` to allow sudo access to members of the group `wheel`: `EDITOR=nano visudo`
 
