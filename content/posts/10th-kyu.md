@@ -5,6 +5,6 @@ tags: ["Karate"]
 draft: false
 ---
 
-{{< figure class="post-image" src="/images/10th-kyu.png" height="768px" >}}
+{{< figure class="post-image" src="/images/10th-kyu.png" width="100%" >}}
 
 <!--more-->
