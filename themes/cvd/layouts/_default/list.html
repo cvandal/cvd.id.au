@@ -3,11 +3,13 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="sidebar">
                     {{- partial "nav.html" . -}}
                 </div>
             </div>
+
+            <div class="col-sm-1"></div>
 
             <div class="col-sm-8">
                 {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
@@ -19,11 +21,7 @@
                         <p><i class="fas fa-tags fa-fw"></i> {{ range .Params.Tags }} <span class="badge tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span> {{ end }}</p>
                         
                         <div class="summary">
-                            {{ if .Params.PostSummary }}
-                                {{ .Params.PostSummary | markdownify }}
-                            {{ else }}
-                                {{ .Summary }}
-                            {{ end}}
+                            {{ .Summary }}
 
                             {{ if .Truncated }}
                                 <div class="badge read-more">
