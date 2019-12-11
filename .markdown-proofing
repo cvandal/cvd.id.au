@@ -1,0 +1,11 @@
+{
+    "presets": [],
+    "analyzers": [
+        "require-oxford-commas",
+        "spelling"
+    ],
+    "rules": {
+        "missing-oxford-commas": "error",
+        "spelling-error": "error"
+    }
+}

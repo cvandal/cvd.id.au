@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "test": "markdown-proofing content/posts/*.md"
+    }
+}
