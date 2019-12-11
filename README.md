@@ -1,9 +1,11 @@
 # cvd.id.au
 
+[![CircleCI](https://circleci.com/gh/cvandal/cvd.id.au.svg?style=svg)](https://circleci.com/gh/cvandal/cvd.id.au)
+
 ## Prerequisites
 
-1. Download, and install [Node.js](https://nodejs.org/en/download)
-2. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
+1. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
+2. Download, and install [Node.js](https://nodejs.org/en/download)
 3. Download, and install the `markdown-proofing` NPM package:
 
    ```bash
