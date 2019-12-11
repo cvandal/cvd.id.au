@@ -5,35 +5,35 @@ tags: ["Raspberry Pi", "Linux"]
 draft: false
 ---
 
-## Download and extract the latest Raspbian image
+## Download, and extract the latest Raspbian image
 
-1. `wget https://downloads.raspberrypi.org/raspbian_lite_latest -P ~/Downloads/raspbian.zip`
+1. Run `wget https://downloads.raspberrypi.org/raspbian_lite_latest -P ~/Downloads/raspbian.zip`
 
-2. `unzip ~/Downloads/raspbian.zip`
+2. Run `unzip ~/Downloads/raspbian.zip`
 
 ## List block devices
 
-1. `lsblk`
+1. Run `lsblk`
 
 ## Write the Raspbian image to an SD card
 
-1. `sudo dd bs=4M if=/path/to/file.img of=/dev/<disk_name> status=progress oflag=sync`
+1. Run `sudo dd bs=4M if=/path/to/file.img of=/dev/<disk_name> status=progress oflag=sync`
 
 ## Mount the boot partition
 
-1. `sudo mkdir /media/pi`
+1. Run `sudo mkdir /media/pi`
 
-2. `sudo mount /dev/<partition_name> /media/pi`
+2. Run `sudo mount /dev/<partition_name> /media/pi`
 
 <!--more-->
 
 ## Enable SSH
 
-1. `touch /media/pi/ssh`
+1. Run `touch /media/pi/ssh`
 
-## Enable and configure WiFi
+## Enable, and configure WiFi
 
-1. `vim /media/pi/wpa_supplicant.conf` and add the following content:
+1. Run `vim /media/pi/wpa_supplicant.conf`, and add the following content:
 
     ```bash
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev

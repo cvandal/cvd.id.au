@@ -14,13 +14,13 @@ draft: false
 
     2. Delete any pre-existing partitions
 
-    3. Create the first partition with a size of `512M` and a type of `EFI System`
+    3. Create the first partition with a size of `512M`, and a type of `EFI System`
 
-    4. Create the second partition with a size of `4G` and a type of `Linux Swap`
+    4. Create the second partition with a size of `4G`, and a type of `Linux Swap`
 
-    5. Create the third partition utilising the remaining disk space and a type of `Linux Filesystem`
+    5. Create the third partition utilising the remaining disk space, and a type of `Linux Filesystem`
 
-3. Format the partitions and enable swap:
+3. Format the partitions, and enable swap:
     1. `mkfs.fat -F32 /dev/nvme0n1p1`
 
     2. `mkswap /dev/nvme0n1p2`
@@ -38,7 +38,7 @@ draft: false
     #Include = /etc/pacman.d/mirrorlist
     ```
 
-6. Install the `base` and `base-devel` packages: `pacstrap /mnt base base-devel`
+6. Install the `base`, and `base-devel` packages: `pacstrap /mnt base base-devel`
 
 7. Generate an fstab file: `genfstab -U /mnt >> /mnt/etc/fstab`<!--more-->
 
@@ -50,7 +50,7 @@ draft: false
     2. `hwclock --systohc`
 
 10. Set the localisation:
-    1. Uncomment `#en_AU.UTF-8 UTF-8` and `#en_US.UTF-8 UTF-8` in `/etc/locale.gen`: `nano /etc/locale.gen`
+    1. Uncomment `#en_AU.UTF-8 UTF-8`, and `#en_US.UTF-8 UTF-8` in `/etc/locale.gen`: `nano /etc/locale.gen`
 
     2. `echo "LANG=en_AU.UTF-8" > /etc/locale.conf`
 
@@ -69,7 +69,7 @@ draft: false
 
 13. Install the `apparmor`, `grub`, and `efibootmgr` packages: `pacman -Syu apparmor grub efibootmgr`
 
-14. Configure apparmor and the grub boot loader:
+14. Configure apparmor, and the grub boot loader:
     1. `systemctl enable apparmor`
 
     2. `mkdir /boot/efi`
@@ -128,7 +128,7 @@ draft: false
 
     5. Set the `File name` to `efi/grub/grubx64.efi`
 
-    6. Save your changes and reboot the computer
+    6. Save your changes, and reboot the computer
 
 ## Phase 2
 
@@ -171,7 +171,7 @@ draft: false
 
     3. `git clone git://github.com/OmniSharp/omnisharp-vim.git ~/.vim/bundle/omnisharp-vim`
 
-    4. `vim ~/.vimrc` and add the following content:
+    4. `vim ~/.vimrc`, and add the following content:
 
         ```bash
         execute pathogen#infect()

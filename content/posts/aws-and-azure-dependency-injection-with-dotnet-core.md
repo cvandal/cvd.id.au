@@ -1,5 +1,5 @@
 ---
-title: "AWS and Azure Dependency Injection with .NET Core"
+title: "AWS, and Azure Dependency Injection with .NET Core"
 date: 2019-06-23T18:12:47+10:00
 tags: ["AWS", "Azure", ".NET Core"]
 draft: false
@@ -17,7 +17,7 @@ From the root directory of your project, run the following commands to install t
 
 ## App Configuration
 
-Add the following JSON objects to `appsettings.json` and `appsettings.Development.json` and then set the values accordingly:
+Add the following JSON objects to `appsettings.json`, and `appsettings.Development.json`, and then set the values accordingly:
 
 ```json
 "AWS": {
@@ -47,7 +47,7 @@ Call `ConfigureAppConfiguration` from the `WebHost.CreateDefaultBuilder` method 
 
 ## Register Services
 
-Register the AWS and Azure services by adding the following code to the `ConfigureServices` method in `Startup.cs`.
+Register the AWS, and Azure services by adding the following code to the `ConfigureServices` method in `Startup.cs`.
 
 ```c#
 // AWS
@@ -99,4 +99,4 @@ namespace ProjectName.Controllers
 }
 ```
 
-Run `dotnet run` and then browse to [https://localhost:5001/api/aws/instances](https://localhost:5001/api/aws/instances).
+Run `dotnet run`, and then browse to [https://localhost:5001/api/aws/instances](https://localhost:5001/api/aws/instances).
