@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.2.0
+
+jobs:
+  build:
+    executor:
+      name: win/default
+      shell: powershell.exe
+    steps:
+      - checkout
+      - run:
+          name: "Download Hugo v0.60.1"
+          command: Invoke-WebRequest -Uri https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Windows-64bit.zip -OutFile ./hugo_0.60.1_Windows-64bit.zip -UseBasicParsing
+      - run:
+          name: "List current directory"
+          command: dir
