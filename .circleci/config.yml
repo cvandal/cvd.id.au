@@ -29,3 +29,9 @@ jobs:
       - run:
           name: "Test Spelling and Punctuation"
           command: npm test
+      - run:
+          name: "Generate Website"
+          command: ./bin/hugo
+      - run:
+          name: "Package Website"
+          command: ./bin/octo pack --id cvd.id.au --version 1.0.$env:CIRCLE_BUILD_NUM
