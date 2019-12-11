@@ -16,13 +16,16 @@ jobs:
           command: $ProgressPreference = "SilentlyContinue"; Invoke-WebRequest -Uri https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Windows-64bit.zip -OutFile ./bin/hugo_0.60.1_Windows-64bit.zip -UseBasicParsing
       - run:
           name: "Extract Hugo"
-          command: Expand-Archive -Path ./bin/hugo*.zip -DestinationPath ./bin
+          command: $ProgressPreference = "SilentlyContinue"; Expand-Archive -Path ./bin/hugo*.zip -DestinationPath ./bin
       - run:
           name: "Download Octo v6.16.0"
           command: $ProgressPreference = "SilentlyContinue"; Invoke-WebRequest -Uri https://download.octopusdeploy.com/octopus-tools/6.16.0/OctopusTools.6.16.0.zip -OutFile ./bin/OctopusTools.6.16.0.zip -UseBasicParsing
       - run:
           name: "Extract Octo"
-          command: Expand-Archive -Path ./bin/OctopusTools*.zip -DestinationPath ./bin
+          command: $ProgressPreference = "SilentlyContinue"; Expand-Archive -Path ./bin/OctopusTools*.zip -DestinationPath ./bin
+      - run:
+          name: "Install the markdown-proofing NPM package"
+          command: npm install -g markdown-proofing
       - run:
           name: "Test Spelling and Punctuation"
           command: npm test
