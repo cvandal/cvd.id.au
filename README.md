@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/cvandal/cvd.id.au.svg?style=svg)](https://circleci.com/gh/cvandal/cvd.id.au)
 
-## Prerequisites
+## Dependencies
 
 1. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
 2. Download, and install [Node.js](https://nodejs.org/en/download)
