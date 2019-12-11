@@ -11,11 +11,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Configure Preference Variables"
-          command: $ProgressPreference = "SilentlyContinue"
-      - run:
           name: "Download Hugo v0.60.1"
-          command: Invoke-WebRequest -Uri https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Windows-64bit.zip -OutFile ./hugo_0.60.1_Windows-64bit.zip -UseBasicParsing
+          command: $ProgressPreference = "SilentlyContinue"; Invoke-WebRequest -Uri https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Windows-64bit.zip -OutFile ./hugo_0.60.1_Windows-64bit.zip -UseBasicParsing
       - run:
           name: "List current directory"
           command: dir
