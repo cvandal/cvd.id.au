@@ -35,3 +35,6 @@ jobs:
       - run:
           name: "Package Website"
           command: ./bin/octo pack --id cvd.id.au --version 1.0.$env:CIRCLE_BUILD_NUM
+      - run:
+          name: "Publish Website"
+          command: ./bin/octo push --package ./cvd.id.au.1.0.$env:CIRCLE_BUILD_NUM.nupkg --server "https://f.feedz.io/cvd/cvd-id-au" --apiKey $env:FEEDZ_API_KEY
