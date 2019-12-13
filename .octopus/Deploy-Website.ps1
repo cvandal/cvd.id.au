@@ -4,6 +4,6 @@
 # Script Source: Script file in a package
 # Script Filename: .octopus/Deploy-Website.ps1
 
-Set-Location -Path ./cvd.id.au
+Set-Location -Path ..
 $env:Path += ";$env:ProgramFiles\nodejs;$home\AppData\Roaming\npm"
 & firebase deploy --token $FIREBASE_TOKEN
