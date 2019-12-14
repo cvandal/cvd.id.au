@@ -1,5 +1,5 @@
 {
-    "scripts": {
-        "test": "markdown-proofing content/posts/*.md"
-    }
+  "scripts": {
+    "test": "markdown-proofing content/posts/*.md"
+  }
 }
