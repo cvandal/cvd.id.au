@@ -1,7 +1,7 @@
 ---
 title: "Headless Raspberry Pi"
 date: 2019-07-15T15:39:38+10:00
-tags: ["Raspberry Pi", "Linux"]
+tags: ["Raspberry Pi", "Raspbian", "Linux"]
 draft: false
 ---
 
@@ -11,13 +11,11 @@ draft: false
 
 2. Run `unzip ~/Downloads/raspbian.zip`
 
-## List block devices
-
-1. Run `lsblk`
-
 ## Write the Raspbian image to an SD card
 
-1. Run `sudo dd bs=4M if=/path/to/file.img of=/dev/<disk_name> status=progress oflag=sync`
+1. Run `lsblk` and take note of the disk name
+
+2. Run `sudo dd bs=4M if=/path/to/*-raspbian-*-lite.img of=/dev/<disk_name> status=progress oflag=sync`
 
 ## Mount the boot partition
 
