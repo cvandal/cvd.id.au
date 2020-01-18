@@ -16,9 +16,10 @@ powerline
 config
 iptables
 64-bit
-DeLorean
-Ghostbusters
-Ecto-1
-Fossilizer
-Voltron
-R2-D2
+delorean
+ghostbusters
+ecto-1
+fossilizer
+voltron
+r2-d2
+powershell
