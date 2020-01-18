@@ -1,6 +1,7 @@
 ---
 title: "Run Divvy at Startup with Administrative Privileges"
 date: 2020-01-18T17:16:10+11:00
+tags: ["Windows", "PowerShell"]
 draft: false
 ---
 
@@ -14,3 +15,5 @@ draft: false
 
 1. Create a shortcut in `C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` named `Divvy`.
 2. Set the `Target` of the shortcut to `"C:\Program Files\PowerShell\6\pwsh.exe" -Command "/path/to/Start-Divvy.ps1"`
+
+<!--more-->
