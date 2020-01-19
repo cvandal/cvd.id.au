@@ -127,12 +127,15 @@ button:active, button:focus {
     margin-bottom: 50px;
 }
 
-.tag:hover, .read-more:hover {
-    background-color: #fff;
+.badge {
+    color: #111;
+    background-color: #7fdbff;
+    border: solid 1px #7fdbff;
 }
 
-.tag a, .read-more a {
+.badge a {
     color: #111;
+    background-color: #7fdbff;
 }
 
 .summary, .content {
@@ -156,12 +159,31 @@ button:active, button:focus {
     background-color: inherit;
 }
 
-.badge {
-    background-color: #7fdbff;
-    color: #111;
-}
-
 .post-image img {
     display: block;
     margin: 0 auto;
+}
+
+.page-item .page-link {
+    color: #111 !important;
+    background-color: #7fdbff !important;
+    border-color: #7fdbff !important;
+}
+
+.page-item.active .page-link {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #7fdbff !important;
+}
+
+.page-item.disabled .page-link {
+    color: #111 !important;
+    background-color: #7fdbff !important;
+    border-color: #7fdbff !important;
+}
+
+.page-item .page-link:hover {
+    color: #fff !important;
+    background-color: #111 !important;
+    border-color: #7fdbff !important;
 }
