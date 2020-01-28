@@ -116,12 +116,14 @@ a, a:hover {
     color: #343a40;
     background-color: #fff;
     border-color: #f8f9fa;
+    text-decoration: none;
 }
 
 .page-item.active .page-link, .page-item .page-link:hover {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40;
+    text-decoration: none;
 }
 
 .page-item.disabled > span {
