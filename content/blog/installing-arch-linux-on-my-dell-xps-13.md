@@ -1,11 +1,10 @@
 ---
 title: "Installing Arch Linux on my Dell XPS 13"
 date: 2019-06-01T15:46:14+10:00
-tags: ["Arch", "Linux", "Dell"]
+tags: ["Arch Linux", "Linux", "Dell"]
+image: "/images/arch.png"
 draft: false
 ---
-
-## Phase 1
 
 1. Update the system clock: `timedatectl set-ntp true`
 
@@ -40,7 +39,7 @@ draft: false
 
 6. Install the `base`, and `base-devel` packages: `pacstrap /mnt base base-devel`
 
-7. Generate an fstab file: `genfstab -U /mnt >> /mnt/etc/fstab`<!--more-->
+7. Generate an fstab file: `genfstab -U /mnt >> /mnt/etc/fstab`
 
 8. Change root into the new system: `arch-chroot /mnt`
 
@@ -130,18 +129,16 @@ draft: false
 
     6. Save your changes, and reboot the computer
 
-## Phase 2
-
-1. Install yay:
+32. Install yay:
     1. `git clone https://aur.archlinux.org/yay.git ~/repos/aur/yay`
 
     2. `cd ~/repos/aur/yay`
 
     3. `makepkg -si`
 
-2. Install must-have packages (cont) (aur): `yay -Syu ttf-ms-fonts slack-desktop discord zoom dropbox onedrive-abraunegg mono msbuild-stable dotnet-sdk powershell-bin visual-studio-code-bin rider azuredatastudio postman-bin github-desktop-bin`
+33. Install must-have packages (cont) (aur): `yay -Syu ttf-ms-fonts slack-desktop discord zoom dropbox onedrive-abraunegg mono msbuild-stable dotnet-sdk powershell-bin visual-studio-code-bin rider azuredatastudio postman-bin github-desktop-bin`
 
-3. Configure the bash startup file `.bashrc` by adding the following lines to `~/.bashrc`:
+34. Configure the bash startup file `.bashrc` by adding the following lines to `~/.bashrc`:
 
     ```bash
     powerline-daemon -q
@@ -158,32 +155,13 @@ draft: false
     . /usr/share/powerline/bindings/bash/powerline.sh
     ```
 
-4. Configure the bash startup file `.inputrc` by adding the following lines to `~/.inputrc`:
+35. Configure the bash startup file `.inputrc` by adding the following lines to `~/.inputrc`:
 
     ```bash
     set completion-ignore-case on
     ```
 
-5. Configure VIM
-    1. `mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
-
-    2. `git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
-
-    3. `git clone git://github.com/OmniSharp/omnisharp-vim.git ~/.vim/bundle/omnisharp-vim`
-
-    4. `vim ~/.vimrc`, and add the following content:
-
-        ```bash
-        execute pathogen#infect()
-        syntax on
-        filetype plugin indent on
-
-        autocmd vimenter * NERDTree
-
-        let g:OmniSharp_start_server = 0
-        ```
-
-6. Configure `powerline`:
+36. Configure `powerline`:
     1. `mkdir -p ~/.config/powerline`
 
     2. `touch ~/.config/powerline/config.json`
@@ -200,6 +178,6 @@ draft: false
         }
         ```
 
-7. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lockwise`
+37. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lockwise`
 
-{{< figure class="post-image" src="/images/arch.jpg" width="300px" >}}
+{{< figure src="/images/i-use-arch-linux.jpg" >}}

@@ -2,3 +2,10 @@ baseURL = "https://cvd.id.au/"
 languageCode = "en-au"
 title = "Chris van Dal"
 theme = "cvd"
+
+[params]
+    author = "Chris van Dal"
+    description = "C#, PowerShell, Windows, Linux, Baseball, Karate, '80s Japanese Cars, Music, and Games"
+
+[outputs]
+    home = ["html", "json"]

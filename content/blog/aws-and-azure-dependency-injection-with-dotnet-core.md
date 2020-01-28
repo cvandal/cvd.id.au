@@ -2,10 +2,11 @@
 title: "AWS, and Azure Dependency Injection with .NET Core"
 date: 2019-06-23T18:12:47+10:00
 tags: ["AWS", "Azure", ".NET Core"]
+image: "/images/dot-net-core.png"
 draft: false
 ---
 
-## Install Packages
+### Install Packages
 
 From the root directory of your project, run the following commands to install the prerequisite packages:
 
@@ -15,9 +16,9 @@ From the root directory of your project, run the following commands to install t
 
 `dotnet add package Microsoft.Azure.Management.Fluent`
 
-## App Configuration
+### App Configuration
 
-Add the following JSON objects to `appsettings.json`, and `appsettings.Development.json`, and then set the values accordingly:
+Add the following JSON objects to `appsettings.json`, and `appsettings.Development.json`, and set the values accordingly:
 
 ```json
 "AWS": {
@@ -32,7 +33,7 @@ Add the following JSON objects to `appsettings.json`, and `appsettings.Developme
 }
 ```
 
-Call `ConfigureAppConfiguration` from the `WebHost.CreateDefaultBuilder` method in `Program.cs`:
+Append `ConfigureAppConfiguration` to the `WebHost.CreateDefaultBuilder` method in `Program.cs`:
 
 ```c#
 .ConfigureAppConfiguration((hostingContext, config) =>
@@ -43,11 +44,9 @@ Call `ConfigureAppConfiguration` from the `WebHost.CreateDefaultBuilder` method 
 })
 ```
 
-<!--more-->
+### Register Services
 
-## Register Services
-
-Register the AWS, and Azure services by adding the following code to the `ConfigureServices` method in `Startup.cs`.
+Register the AWS, and Azure services by adding the following to the `ConfigureServices` method in `Startup.cs` class.
 
 ```c#
 // AWS
@@ -65,9 +64,7 @@ services.AddSingleton(serviceProvider => Microsoft.Azure.Management.Fluent.Azure
     .WithSubscription(azureCredentials.DefaultSubscriptionId));
 ```
 
-## Example Usage
-
-Create a controller named `AwsController.cs` with the following content:
+### Sample Application
 
 ```c#
 using System.Collections.Generic;
@@ -84,19 +81,17 @@ namespace ProjectName.Controllers
     {
         public AwsController(IAmazonEC2 amazonEc2)
         {
-            AmazonEc2 = amazonEc2;
+            ec2 = ec2;
         }
 
-        private IAmazonEC2 AmazonEc2 { get; }
+        private IAmazonEC2 ec2 { get; }
 
         [HttpGet("[action]")]
         public async Task<IEnumerable<Instance>> Instances()
         {
-            var instances = await AmazonEc2.DescribeInstancesAsync();
+            var instances = await ec2.DescribeInstancesAsync();
             return instances.Reservations.SelectMany(i => i.Instances);
         }
     }
 }
 ```
-
-Run `dotnet run`, and then browse to [https://localhost:5001/api/aws/instances](https://localhost:5001/api/aws/instances).

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+/*
+    Black:           #343a40
+    White:           #fff
+    Gray (Lighter):  #f8f9fa
+    Gray (Darker):   #dfe0e1
+    Blue:            #0074d9
+    Fuchsia:         #f012be
+    Green:           #2ecc40
+*/
+
+h1, h2, h3, h4, h5, p, a {
+    color: #343a40;
+}
+
+a, a:hover {
+    color: #343a40;
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    .intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.jumbotron {
+    margin-bottom: 25px;
+    background-color: #f8f9fa;
+}
+
+.jumbotron h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 8em;
+    text-align: center;
+}
+
+.jumbotron h4 {
+    text-align: center;
+}
+
+.jumbotron h1 a, .jumbotron h1 a:hover  {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.jumbotron p {
+    text-align: center;
+}
+
+.jumbotron p a:hover {
+    color: #0074d9;
+}
+
+.jumbotron p i {
+    margin: 0 15px;
+    font-size: 2em;
+}
+
+.jumbotron .input-group-text, .jumbotron .input-group-text i {
+    color: #fff;
+    background-color: #343a40;
+}
+
+.jumbotron .input-group-text, .jumbotron .form-control {
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+
+.jumbotron .tags .badge {
+    color: #fff;
+}
+
+.card {
+    color: #343a40;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(52, 58, 64, 0.1);
+}
+
+.card:hover {
+    color: #343a40;
+    text-decoration: none;
+    box-shadow: 0 8px 16px 0 rgba(52, 58, 64, 0.3);
+}
+
+.card h4 {
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+}
+
+.card-img-top {
+    padding: 20px 0;
+    height: 150px;
+    object-fit: scale-down;
+    background-color: #f8f9fa;
+}
+
+.pagination {
+    margin: 0 auto 25px auto;
+    justify-content: center;
+}
+
+.page-link {
+    padding: 10px 15px;
+}
+
+.page-item .page-link, .page-item.disabled .page-link {
+    color: #343a40;
+    background-color: #fff;
+    border-color: #f8f9fa;
+}
+
+.page-item.active .page-link, .page-item .page-link:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.page-item.disabled > span {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #343a40;
+    background-color: #fff;
+    border-top: 1px solid #f8f9fa;
+    border-bottom: 1px solid #f8f9fa;
+    border-left: 1px solid #f8f9fa;
+}
+
+aside img {
+    margin-bottom: 15px;
+    height: 100px;
+    object-fit: scale-down;
+    border-radius: 50%;
+}
+
+article {
+    margin-bottom: 25px;
+}
+
+article h1, article h2, article h3, article h4, article h5 {
+    margin-bottom: 25px;
+    font-family: 'Zilla Slab', serif;
+}
+
+article figure img {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    width: 75%;
+    border: 1px solid #dfe0e1;
+    border-radius:.25rem;
+}
+
+article p code {
+    padding: 5px;
+    color: #0074d9;
+    background-color: #f8f9fa;
+}
+
+article pre {
+    padding: 5px;
+    color: #0074d9 !important;
+    background-color: #f8f9fa !important;
+}
+
+.language-powershell span,
+.language-bash span,
+.language-json span,
+.language-c\# span,
+.language-hcl span,
+.language-css span,
+.language-javascript span {
+    color: #f012be !important;
+    background-color: #f8f9fa !important;
+}
+
+.white-bg {
+    background-color: #fff !important;
+}
+
+.rainbow-text {
+    background: linear-gradient(to right, #0074d9,#f012be,#2ecc40);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: rainbow 2s ease-in-out infinite;
+    transition: color .2s ease-in-out;
+    color: rgba(0,0,0,1);
+}
+
+.rainbow-text:hover {
+    color: rgba(0,0,0,0);
+}
+
+@keyframes rainbow { 
+    0% {
+        background-position: left
+    }
+    50% {
+        background-position: right
+    }
+    100% {
+        background-position:left
+    }
+}

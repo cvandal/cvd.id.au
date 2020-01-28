@@ -6,7 +6,6 @@ homepage = "https://cvd.id.au/"
 tags = []
 features = []
 min_version = "0.55.6"
-
 [author]
-  name = "Chris van Dal"
-  homepage = "https://cvd.id.au/"
+name = "Chris van Dal"
+homepage = "https://cvd.id.au/"

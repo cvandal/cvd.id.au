@@ -1,5 +1,8 @@
 {
   "scripts": {
-    "test": "markdown-proofing content/posts/*.md"
+    "test": "markdown-proofing content/blog/*.md"
+  },
+  "dependencies": {
+    "hugo-lunr": "0.0.4"
   }
 }

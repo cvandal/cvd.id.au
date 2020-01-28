@@ -1,3 +1,5 @@
 .firebase
+archetypes
 public
+resources
 *.nupkg

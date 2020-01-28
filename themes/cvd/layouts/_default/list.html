@@ -1,39 +1,21 @@
-{{ define "main" }}
-    {{- partial "header.html" . -}}
+{{ define "body" }}
+    {{ partial "jumbotron.html" . }}
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="sidebar">
-                    {{- partial "nav.html" . -}}
-                </div>
-            </div>
-
-            <div class="col-sm-1"></div>
-
-            <div class="col-sm-8">
-                {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-                {{ range $paginator.Pages }}
-                    <article>
-                        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-                        
-                        <p><i class="far fa-calendar-alt fa-fw"></i> <span class="date">{{ .Date.Format "January 2, 2006" }}</span></p>
-                        <p><i class="fas fa-tags fa-fw"></i> {{ range .Params.Tags }} <span class="badge tag"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span> {{ end }}</p>
-                        
-                        <div class="summary">
-                            {{ .Summary }}
-
-                            {{ if .Truncated }}
-                                <div class="badge read-more">
-                                    <a href="{{ .RelPermalink }}">Read more <i class="fas fa-arrow-right fa-fw"></i></a>
-                                </div>
-                            {{ end }}
+        <div class="row row-cols-1 row-cols-md-3">
+            {{ $paginator := .Paginate (where .Pages "Type" "blog") 9 }}
+            {{ range $paginator.Pages }}
+                <div class="col mb-4">
+                    <a class="card h-100" href="{{.Permalink}}">
+                        <img class="card-img-top" src="{{ .Params.Image }}" alt="{{.Title}}">
+                        <div class="card-body">
+                            <h4 class="card-title">{{.Title}}</h4>
                         </div>
-                    </article>
-                {{ end }}
-
-                {{ template "_internal/pagination.html" . }}
-            </div>
+                    </a>
+                </div>
+            {{ end }}
         </div>
+
+        {{ template "_internal/pagination.html" . }}
     </div>
 {{ end }}

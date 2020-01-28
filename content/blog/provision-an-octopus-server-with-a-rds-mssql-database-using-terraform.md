@@ -1,11 +1,12 @@
 ---
-title: "Provision a single Octopus server with an RDS MSSQL database using Terraform"
+title: "Provision an Octopus Server with a RDS MSSQL Database using Terraform"
 date: 2019-06-11T19:22:37+10:00
 tags: ["Octopus", "RDS", "Terraform"]
+image: "/images/terraform.png"
 draft: false
 ---
 
-## Terraform
+### Terraform Template
 
 ```hcl
 provider "aws" {
@@ -35,11 +36,7 @@ data "aws_ami" "ami" {
         values = ["hvm"]
     }
 }
-```
 
-<!--more-->
-
-```hcl
 resource "aws_vpc" "vpc" {
     cidr_block           = "10.0.0.0/16"
     enable_dns_support   = true
@@ -357,14 +354,3 @@ resource "aws_route53_record" "route53_record" {
     records  = ["${aws_eip.instance_eip.public_ip}"]
 }
 ```
-
-## Post Terraform
-
-1. Enable Let's Encrypt
-
-2. Enable HTTP Strict Transport Security:
-
-    ```powershell
-    & "C:\Program Files\Octopus Deploy\Octopus\Octopus.Server.exe" configure --instance="OctopusServer" --webForceSSL="True"
-    & "C:\Program Files\Octopus Deploy\Octopus\Octopus.Server.exe" configure --hstsEnabled=true --hstsMaxAge=31556926
-    ```
