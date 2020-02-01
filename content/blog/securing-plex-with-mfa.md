@@ -71,7 +71,7 @@ draft: false
 
 ### Configure Okta
 
-1. Browse to [https://developer.okta.com](https://developer.okta.com) and sign in.
+1. Browse to [https://developer.okta.com](https://developer.okta.com), and sign in.
 
 2. Click on `Applications`, and then click on `Add Application`.
 
@@ -86,7 +86,7 @@ draft: false
 
 5. Click on `Security`, and then click on `Multifactor`
 
-6. Click on `Google Authenticator`, and then click on the drop-down menu and select `Active`
+6. Click on `Google Authenticator`, and then click on the drop-down menu, and then select `Active`
 
 7. Click on `Security`, and then click on `Authentication`
 
