@@ -182,7 +182,9 @@ article pre {
 .language-c\# span,
 .language-hcl span,
 .language-css span,
-.language-javascript span {
+.language-javascript span,
+.language-nginx span,
+.language-yml span {
     color: #f012be !important;
     background-color: #f8f9fa !important;
 }
