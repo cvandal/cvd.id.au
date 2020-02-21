@@ -6,4 +6,4 @@
 
 & choco install -y nodejs
 $env:Path += ";$env:ProgramFiles\nodejs"
-& npm install -g firebase-tools --no-optional
+& npm install -g firebase-tools --no-optional --loglevel=error
