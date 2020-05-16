@@ -1,7 +1,7 @@
 ---
 title: "Install Fedora 32 on Surface Laptop 3"
 date: 2020-05-05T09:26:56+10:00
-draft: true
+draft: false
 ---
 
 > Before you begin, ensure that you have connected an external keyboard, and mouse.
