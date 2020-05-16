@@ -6,16 +6,16 @@
 
 1. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
 2. Download, and install [Node.js](https://nodejs.org/en/download)
-3. Download, and install the `markdown-proofing` NPM package:
+3. Download, and install NPM packages:
 
    ```bash
-   npm install -g markdown-proofing
+   npm install
    ```
 
 4. Download, install, and configure the Firebase CLI:
 
    ```bash
-   npm install -g firebase-tools
+   npm install firebase-tools
    firebase login
    ```
 

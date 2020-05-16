@@ -1,11 +1,11 @@
 {
     "presets": [],
     "analyzers": [
-        "require-oxford-commas",
-        "spelling"
+        "spelling",
+        "require-oxford-commas"
     ],
     "rules": {
-        "missing-oxford-commas": "error",
-        "spelling-error": "error"
+        "spelling-error": "error",
+        "missing-oxford-commas": "info"
     }
 }

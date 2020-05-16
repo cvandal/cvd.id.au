@@ -3,6 +3,7 @@
     "test": "markdown-proofing content/blog/*.md"
   },
   "dependencies": {
-    "hugo-lunr": "0.0.4"
+    "hugo-lunr": "0.0.4",
+    "markdown-proofing": "1.0.2"
   }
 }
