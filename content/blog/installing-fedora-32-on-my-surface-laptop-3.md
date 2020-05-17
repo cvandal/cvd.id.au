@@ -1,5 +1,5 @@
 ---
-title: "Install Fedora 32 on Surface Laptop 3"
+title: "Installing Fedora 32 on my Surface Laptop 3"
 date: 2020-05-05T09:26:56+10:00
 tags: ["Fedora", "Microsoft", "Linux"]
 image: "/images/fedora.png"
@@ -104,8 +104,8 @@ draft: false
    sudo tee /etc/X11/xorg.conf.d/10-monitor.conf << END
    Section "Monitor"
        Identifier "eDP-1"
-       Modeline "1920x1280_60.00"  206.25  1920 2056 2256 2592  1280 1283 1293 1327 -hsync +vsync
-       Option "PreferredMode" "1920x1280_60.00"
+       Modeline "1800x1200_60.00"  180.75  1800 1920 2112 2424  1200 1203 1213 1245 -hsync +vsync
+       Option "PreferredMode" "1800x1200_60.00"
    EndSection
    END
    ```
