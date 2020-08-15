@@ -1,7 +1,7 @@
+*.nupkg
 .firebase
 archetypes
 node_modules
+package-lock.json
 public
 resources
-*.nupkg
-package-lock.json
