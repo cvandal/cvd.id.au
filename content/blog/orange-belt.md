@@ -1,7 +1,7 @@
 ---
 title: "Orange Belt"
 date: 2020-01-18T17:16:44+11:00
-tags: ["Karate"]
+tags: ["Karate", "IMC"]
 image: "/images/imc.png"
 draft: false
 ---

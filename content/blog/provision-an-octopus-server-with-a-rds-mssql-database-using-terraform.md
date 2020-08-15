@@ -8,7 +8,7 @@ draft: false
 
 ### Terraform Template
 
-```hcl
+```
 provider "aws" {
     region     = "ap-southeast-2"
     access_key = "${var.primary_aws_access_key}"

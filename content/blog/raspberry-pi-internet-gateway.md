@@ -16,17 +16,17 @@ draft: false
 
 1. Run `vim /etc/netplan/50-cloud-init.yaml`, and set the following configuration:
 
-    ```bash
-    network:
-    ethernets:
-        eth0:
-            dhcp4: no
-            addresses: [<ip_address>/<cidr_prefix>]
-            gateway4: <gateway_ip_address>
-            nameservers:
-                    addresses: [1.1.1.1,1.0.0.1]
-    version: 2
-    ```
+   ```
+   network:
+   ethernets:
+       eth0:
+           dhcp4: no
+           addresses: [<ip_address>/<cidr_prefix>]
+           gateway4: <gateway_ip_address>
+           nameservers:
+                   addresses: [1.1.1.1,1.0.0.1]
+   version: 2
+   ```
 
 ### Enable the legacy version of iptables
 

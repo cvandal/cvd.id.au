@@ -8,13 +8,13 @@
 2. Download, and install [Node.js](https://nodejs.org/en/download)
 3. Download, and install NPM packages:
 
-   ```bash
+   ```
    npm install
    ```
 
 4. Download, install, and configure the Firebase CLI:
 
-   ```bash
+   ```
    npm install firebase-tools
    firebase login
    ```

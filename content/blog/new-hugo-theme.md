@@ -12,7 +12,7 @@ draft: false
 
 ### Rainbow Icons
 
-```css
+```
 .rainbow-text {
     background: linear-gradient(to right, #0074d9, #f012be, #2ecc40);
     background-size: 200% 200%;
@@ -27,7 +27,7 @@ draft: false
     color: rgba(0,0,0,0);
 }
 
-@keyframes rainbow { 
+@keyframes rainbow {
     0% {
         background-position: left
     }
@@ -48,7 +48,7 @@ draft: false
 
 ### Search Results
 
-```javascript
+```
 // Requires jquery + fuse.js
 
 // Hack to prevent Hugo from showing a card for the 'Search Results' page

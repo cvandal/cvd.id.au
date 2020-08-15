@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 
 /*
+    # Colours:
     Black:           #343a40
-    White:           #fff
+    White:           #ffffff
     Gray (Lighter):  #f8f9fa
     Gray (Darker):   #dfe0e1
     Blue:            #0074d9
     Fuchsia:         #f012be
     Green:           #2ecc40
+
+    # Icons:
+    https://tablericons.com/
 */
 
 h1, h2, h3, h4, h5, p, a {
@@ -20,6 +24,10 @@ a, a:hover {
     text-decoration: underline;
 }
 
+.white-bg {
+    background-color: #fff !important;
+}
+
 @media (min-width: 992px) {
     .intro {
         position: absolute;
@@ -29,6 +37,15 @@ a, a:hover {
         -webkit-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
     }
+}
+
+.icons a {
+    margin: 0 25px;
+    text-decoration: none;
+}
+
+.icon:hover {
+    filter: invert(0.5) sepia(1) saturate(20) hue-rotate(175deg) brightness(1);
 }
 
 .jumbotron {
@@ -162,59 +179,4 @@ article figure img {
     width: 75%;
     border: 1px solid #dfe0e1;
     border-radius:.25rem;
-}
-
-article p code {
-    padding: 5px;
-    color: #0074d9;
-    background-color: #f8f9fa;
-}
-
-article pre {
-    padding: 5px;
-    color: #0074d9 !important;
-    background-color: #f8f9fa !important;
-}
-
-.language-powershell span,
-.language-bash span,
-.language-json span,
-.language-c\# span,
-.language-hcl span,
-.language-css span,
-.language-javascript span,
-.language-nginx span,
-.language-yml span {
-    color: #f012be !important;
-    background-color: #f8f9fa !important;
-}
-
-.white-bg {
-    background-color: #fff !important;
-}
-
-.rainbow-text {
-    background: linear-gradient(to right, #0074d9,#f012be,#2ecc40);
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: rainbow 2s ease-in-out infinite;
-    transition: color .2s ease-in-out;
-    color: rgba(0,0,0,1);
-}
-
-.rainbow-text:hover {
-    color: rgba(0,0,0,0);
-}
-
-@keyframes rainbow { 
-    0% {
-        background-position: left
-    }
-    50% {
-        background-position: right
-    }
-    100% {
-        background-position:left
-    }
 }

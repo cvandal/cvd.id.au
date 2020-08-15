@@ -9,33 +9,35 @@ draft: false
 1. Update the system clock: `timedatectl set-ntp true`
 
 2. Partition the disk:
-    1. `cfdisk /dev/nvme0n1`
 
-    2. Delete any pre-existing partitions
+   1. `cfdisk /dev/nvme0n1`
 
-    3. Create the first partition with a size of `512M`, and a type of `EFI System`
+   2. Delete any pre-existing partitions
 
-    4. Create the second partition with a size of `4G`, and a type of `Linux Swap`
+   3. Create the first partition with a size of `512M`, and a type of `EFI System`
 
-    5. Create the third partition utilising the remaining disk space, and a type of `Linux Filesystem`
+   4. Create the second partition with a size of `4G`, and a type of `Linux Swap`
+
+   5. Create the third partition utilising the remaining disk space, and a type of `Linux Filesystem`
 
 3. Format the partitions, and enable swap:
-    1. `mkfs.fat -F32 /dev/nvme0n1p1`
 
-    2. `mkswap /dev/nvme0n1p2`
+   1. `mkfs.fat -F32 /dev/nvme0n1p1`
 
-    3. `swapon /dev/nvme0n1p2`
+   2. `mkswap /dev/nvme0n1p2`
 
-    4. `mkfs.ext4 /dev/nvme0n1p3`
+   3. `swapon /dev/nvme0n1p2`
+
+   4. `mkfs.ext4 /dev/nvme0n1p3`
 
 4. Mount the file system: `mount /dev/nvme0n1p3 /mnt`
 
 5. Enable the `multilib` repository by uncommenting the following lines in `/etc/pacman.conf`:
 
-    ```bash
-    #[multilib]
-    #Include = /etc/pacman.d/mirrorlist
-    ```
+   ```
+   #[multilib]
+   #Include = /etc/pacman.d/mirrorlist
+   ```
 
 6. Install the `base`, and `base-devel` packages: `pacstrap /mnt base base-devel`
 
@@ -44,11 +46,13 @@ draft: false
 8. Change root into the new system: `arch-chroot /mnt`
 
 9. Set the time zone:
-    1. `ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime`
 
-    2. `hwclock --systohc`
+   1. `ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime`
+
+   2. `hwclock --systohc`
 
 10. Set the localisation:
+
     1. Uncomment `#en_AU.UTF-8 UTF-8`, and `#en_US.UTF-8 UTF-8` in `/etc/locale.gen`: `nano /etc/locale.gen`
 
     2. `echo "LANG=en_AU.UTF-8" > /etc/locale.conf`
@@ -56,6 +60,7 @@ draft: false
     3. `locale-gen`
 
 11. Set the hostname:
+
     1. `echo "arch" > /etc/hostname`
 
     2. `echo "127.0.0.1 localhost" >> /etc/hosts`
@@ -69,6 +74,7 @@ draft: false
 13. Install the `apparmor`, `grub`, and `efibootmgr` packages: `pacman -Syu apparmor grub efibootmgr`
 
 14. Configure apparmor, and the grub boot loader:
+
     1. `systemctl enable apparmor`
 
     2. `mkdir /boot/efi`
@@ -110,6 +116,7 @@ draft: false
 28. Add the user `chris` to the group `docker`: `sudo usermod -aG docker chris`
 
 29. Set the inotify watches limit:
+
     1. `echo "fs.inotify.max_user_watches = 524288" >> /usr/lib/sysctl.d/50-default.conf`
 
     2. `sudo sysctl -p --system`
@@ -117,6 +124,7 @@ draft: false
 30. Reboot the computer: `sudo reboot`
 
 31. Configure the BIOS:
+
     1. Press `F2`
 
     2. Select `Boot sequence`
@@ -130,6 +138,7 @@ draft: false
     6. Save your changes, and reboot the computer
 
 32. Install yay:
+
     1. `git clone https://aur.archlinux.org/yay.git ~/repos/aur/yay`
 
     2. `cd ~/repos/aur/yay`
@@ -140,7 +149,7 @@ draft: false
 
 34. Configure the bash startup file `.bashrc` by adding the following lines to `~/.bashrc`:
 
-    ```bash
+    ```
     powerline-daemon -q
 
     export GOPATH=$HOME/go
@@ -157,26 +166,27 @@ draft: false
 
 35. Configure the bash startup file `.inputrc` by adding the following lines to `~/.inputrc`:
 
-    ```bash
+    ```
     set completion-ignore-case on
     ```
 
 36. Configure `powerline`:
+
     1. `mkdir -p ~/.config/powerline`
 
     2. `touch ~/.config/powerline/config.json`
 
     3. Show the git branch in powerline by adding the following lines to `~/.config/powerline/config.json`:
 
-        ```json
-        {
-          "ext": {
-            "shell": {
-              "theme": "default_leftonly"
-            }
-          }
-        }
-        ```
+       ```
+       {
+         "ext": {
+           "shell": {
+             "theme": "default_leftonly"
+           }
+         }
+       }
+       ```
 
 37. Install must-have Firefox extensions: `plasma integration`, `duck duck go privacy essentials`, `firefox multi-account containers`, and `lockwise`
 

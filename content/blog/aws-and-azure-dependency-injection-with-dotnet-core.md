@@ -20,7 +20,7 @@ From the root directory of your project, run the following commands to install t
 
 Add the following JSON objects to `appsettings.json`, and `appsettings.Development.json`, and set the values accordingly:
 
-```json
+```
 "AWS": {
   "Profile": "",
   "Region": ""
@@ -35,7 +35,7 @@ Add the following JSON objects to `appsettings.json`, and `appsettings.Developme
 
 Append `ConfigureAppConfiguration` to the `WebHost.CreateDefaultBuilder` method in `Program.cs`:
 
-```c#
+```
 .ConfigureAppConfiguration((hostingContext, config) =>
 {
     config.SetBasePath(Directory.GetCurrentDirectory());
@@ -48,7 +48,7 @@ Append `ConfigureAppConfiguration` to the `WebHost.CreateDefaultBuilder` method 
 
 Register the AWS, and Azure services by adding the following to the `ConfigureServices` method in `Startup.cs` class.
 
-```c#
+```
 // AWS
 services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
 services.AddAWSService<IAmazonEC2>();
@@ -66,7 +66,7 @@ services.AddSingleton(serviceProvider => Microsoft.Azure.Management.Fluent.Azure
 
 ### Sample Application
 
-```c#
+```
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
