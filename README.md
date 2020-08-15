@@ -6,13 +6,7 @@
 
 1. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
 2. Download, and install [Node.js](https://nodejs.org/en/download)
-3. Download, and install NPM packages:
-
-   ```
-   npm install
-   ```
-
-4. Download, install, and configure the Firebase CLI:
+3. Download, install, and configure the Firebase CLI:
 
    ```
    npm install firebase-tools
