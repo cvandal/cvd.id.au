@@ -12,7 +12,7 @@ draft: false
 
 1. Insert the Fedora 32 Live USB.
 
-2. Press and hold the volume up button and at the same time, press and release the power button.
+2. Hold down the volume up button, and at the same time, press the power button once.
 
 3. Click on `Boot Configuration`.
 
@@ -20,7 +20,7 @@ draft: false
 
 5. Click on `Exit`, and then click on `Restart Now`.
 
-6. Press and hold the volume down button.
+6. Hold down the volume down button.
 
 7. Select `start-fedora-workstation-live 32`.
 
@@ -30,7 +30,7 @@ draft: false
 
 2. Click on `Continue`.
 
-3. Click on `Time and Date`.
+3. Click on `Time & Date`.
 
 4. Set the region to `Australia`.
 
