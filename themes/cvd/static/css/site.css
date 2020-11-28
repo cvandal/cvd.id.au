@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 
 /*
-    # Colours:
-    Black:           #343a40
-    White:           #ffffff
-    Gray (Lighter):  #f8f9fa
-    Gray (Darker):   #dfe0e1
-    Blue:            #0074d9
-    Fuchsia:         #f012be
-    Green:           #2ecc40
+    Colour Scheme:
+    Black:          #343a40
+    White:          #ffffff
+    Gray (Lighter): #f8f9fa
+    Gray (Darker):  #dfe0e1
+    Blue:           #0074d9
+    Fuchsia:        #f012be
+    Green:          #2ecc40
 
-    # Icons:
+    Icons:
     https://tablericons.com/
 */
 
@@ -39,9 +39,21 @@ a, a:hover {
     }
 }
 
-.icons a {
-    margin: 0 25px;
-    text-decoration: none;
+.flex-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.flex-item {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
 }
 
 .icon:hover {
@@ -55,7 +67,7 @@ a, a:hover {
 
 .jumbotron h1 {
     font-family: 'Bangers', cursive;
-    font-size: 8em;
+    font-size: 7em;
     text-align: center;
 }
 
@@ -157,14 +169,14 @@ a, a:hover {
 }
 
 aside img {
-    margin-bottom: 15px;
+    margin: 20px 0 15px 0;
     height: 100px;
     object-fit: scale-down;
     border-radius: 50%;
 }
 
 article {
-    margin-bottom: 25px;
+    padding: 10px 0 25px 0;
 }
 
 article h1, article h2, article h3, article h4, article h5 {
