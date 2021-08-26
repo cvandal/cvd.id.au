@@ -3,6 +3,7 @@
     "test": "markdown-proofing content/blog/*.md"
   },
   "dependencies": {
+    "firebase-tools": "9.16.6",
     "hugo-lunr": "0.0.4",
     "markdown-proofing": "1.0.2"
   }
