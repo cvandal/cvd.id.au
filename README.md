@@ -13,7 +13,7 @@ TBC
 ## Deploy
 
 - Run `curl -sL https://firebase.tools | bash` to download and install the Firebase CLI
-- Run `firebase deploy --only hosting --token $FIREBASE_TOKEN`
+- Run `firebase deploy --only hosting --token $FIREBASE_TOKEN` to deploy the website to Firebase
 
 ## To Do:
 
