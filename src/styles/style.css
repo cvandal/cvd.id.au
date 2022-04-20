@@ -55,32 +55,37 @@ a:hover {
 
 header {
   margin: 50px 0 50px 0;
+  text-align: center;
 }
 
-header h1 {
-  padding: 15px 0 0 0;
-  text-align: center;
+header h1 a {
+  text-decoration: none;
+  color: transparent;
+  background: -webkit-linear-gradient(
+    45deg,
+    #282a36,
+    #bd93f9,
+    #8be9fd,
+    #282a36
+  );
+  background: -moz-linear-gradient(45deg, #282a36, #bd93f9, #8be9fd, #282a36);
+  background: -o-linear-gradient(45deg, #282a36, #bd93f9, #8be9fd, #282a36);
+  background: linear-gradient(45deg, #282a36, #bd93f9, #8be9fd, #282a36);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header h1 a:hover {
+  color: transparent;
 }
 
 header h2 {
   padding: 15px 15px;
-  text-align: center;
-}
-
-header a {
-  text-decoration: none;
-  color: transparent;
-  background: linear-gradient(45deg, #282a36, #bd93f9, #8be9fd, #282a36);
-  background-clip: text;
-}
-
-header a:hover {
-  color: transparent;
 }
 
 .brands {
   padding: 15px 15px;
-  text-align: center;
 }
 
 .brands i {
@@ -121,7 +126,7 @@ header a:hover {
   border-bottom-left-radius: 25px;
 }
 
-@media only screen and (max-width : 800px) {
+@media only screen and (max-width: 800px) {
   .card-img-top {
     max-width: 30vw;
     height: inherit;
@@ -146,12 +151,6 @@ header a:hover {
   text-align: center;
 }
 
-@media (max-width: 768) {
-  .card-title {
-    font-size: 1rem !important;
-  }
-}
-
 .card-publish-date {
   width: 100%;
   margin: 0;
@@ -170,6 +169,12 @@ header a:hover {
 .article h1 {
   margin: 0 0 25px 0;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .article h1 {
+    font-size: 3em;
+  }
 }
 
 .article h2 {
@@ -237,8 +242,6 @@ header a:hover {
 }
 
 .page-link {
-  margin: 0;
-  padding: 15px 15px 10px 15px;
   color: #f8f8f2;
   background-color: #282a36;
   border: none;
