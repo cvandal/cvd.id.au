@@ -1,0 +1,33 @@
+---
+import "../../styles/style.css";
+import Head from "../../components/Head.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Posts from "../../components/Posts.astro";
+import Pagination from "../../components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const posts = await Astro.glob("./*.md");
+	const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+	return paginate(sortedPosts, { pageSize: 3 });
+}
+
+const { page } = Astro.props;
+---
+
+<html lang="en">
+    <Head title="Chris van Dal" />
+
+    <body>
+        <main class="container">
+            <Header />
+
+            <Posts posts={page.data} />
+
+            <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+        </main>
+
+        <Footer />
+    </body>
+</html>

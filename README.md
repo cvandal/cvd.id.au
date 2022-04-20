@@ -1,23 +1,29 @@
 # cvd.id.au
 
-[![CircleCI](https://circleci.com/gh/cvandal/cvd.id.au.svg?style=svg)](https://circleci.com/gh/cvandal/cvd.id.au)
+Built with [Astro](https://astro.build/), tested and packaged with [GitHub Actions](https://github.com/features/actions), deployed by [Octopus Deploy](https://octopus.com/), and running on [Firebase](https://firebase.google.com/).
 
-## Dependencies
+## Build
 
-1. Download, and install [Hugo](https://github.com/gohugoio/hugo/releases)
-2. Download, and install [Node.js](https://nodejs.org/en/download)
-3. Run `npm install`
-4. Run `firebase login`
+TBC
 
-## Development
+## Test
 
-1. Run `hugo server`, and browse to [http://localhost:1313](http://localhost:1313)
-
-## Testing
-
-1. Run `npm test`
+TBC
 
 ## Deploy
 
-1. Run `hugo`
-2. Run `firebase deploy`
+TBC
+
+## To Do:
+
+- Implement search functionality
+- Perform spelling and grammar checking
+- Update CI/CD
+
+## Useful Websites
+
+- SVG Assets: [https://app.haikei.app/](https://app.haikei.app/)
+- Tint and Shade Generator: [https://maketintsandshades.com/](https://maketintsandshades.com/)
+- Icons: [https://fontawesome.com/](https://fontawesome.com/)
+- Convert Hex to RBG: [https://www.rapidtables.com/convert/color/hex-to-rgb.html](https://www.rapidtables.com/convert/color/hex-to-rgb.html)
+s

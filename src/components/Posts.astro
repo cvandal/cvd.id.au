@@ -1,0 +1,21 @@
+---
+export interface Props {
+    posts: any
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="row row-cols-1 row-cols-md-1">
+    {posts.map((p) =>
+        <div class="col mb-4">
+            <a class="card" href={p.url}>
+                <img class="card-img-top" src={p.frontmatter.image} alt="">
+                <div class="card-body">
+                    <h2 class="card-title">{p.frontmatter.title}</h2>
+                    <p class="card-publish-date">{p.frontmatter.publishDate}</p>
+                </div>
+            </a>
+        </div>
+    )}
+</div>
