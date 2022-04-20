@@ -54,12 +54,17 @@ a:hover {
 }
 
 header {
-  margin: 25px 0 50px 0;
-  text-align: center;
+  margin: 50px 0 50px 0;
 }
 
 header h1 {
-  padding: 5px 0 15px 0;
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+
+header h2 {
+  padding: 15px 15px;
+  text-align: center;
 }
 
 header a {
@@ -73,8 +78,13 @@ header a:hover {
   color: transparent;
 }
 
+.brands {
+  padding: 15px 15px;
+  text-align: center;
+}
+
 .brands i {
-  margin: 25px 12px 0 12px;
+  margin: 0 25px;
   font-size: 1.5em;
   color: #f8f8f2;
 }
@@ -102,7 +112,7 @@ header a:hover {
 }
 
 .card-img-top {
-  width: 30vw;
+  max-width: 20vw;
   height: inherit;
   padding: 20px 20px;
   object-fit: contain;
@@ -111,9 +121,15 @@ header a:hover {
   border-bottom-left-radius: 25px;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width : 800px) {
   .card-img-top {
-    width: 350px !important;
+    max-width: 30vw;
+    height: inherit;
+    padding: 20px 20px;
+    object-fit: contain;
+    background-color: #242631;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
   }
 }
 
@@ -148,6 +164,7 @@ header a:hover {
   padding: 25px 25px;
   background-color: #282a36;
   border-radius: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 .article h1 {
@@ -220,6 +237,8 @@ header a:hover {
 }
 
 .page-link {
+  margin: 0;
+  padding: 15px 15px 10px 15px;
   color: #f8f8f2;
   background-color: #282a36;
   border: none;
