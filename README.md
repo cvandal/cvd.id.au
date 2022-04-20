@@ -16,6 +16,7 @@ TBC
 
 ## To Do:
 
+- Add a custom 404 page
 - Implement search functionality
 - Perform spelling and grammar checking
 - Update CI/CD
