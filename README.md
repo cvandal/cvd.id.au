@@ -2,13 +2,13 @@
 
 Built with [Astro](https://astro.build/), tested and packaged with [GitHub Actions](https://github.com/features/actions), deployed by [Octopus Deploy](https://octopus.com/), and running on [Firebase](https://firebase.google.com/).
 
-## Build
-
-TBC
-
 ## Test
 
-TBC
+- Run `npm run dev`
+
+## Build
+
+- Run `npm run build`
 
 ## Deploy
 
