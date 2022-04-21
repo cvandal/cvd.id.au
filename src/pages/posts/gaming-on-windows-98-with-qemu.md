@@ -14,6 +14,10 @@ publishDate: 15 Aug 2020
 
 > Use `CTRL+ALT+G` to release the mouse
 
+> Use `CTRL+ALT+F` to enter/exit full screen mode
+
+> Due to a bug in the display driver, opening MS-DOS can screw with your screen resolution. Use `ALT+ENTER` to fix it
+
 ## Download the Windows 98 SE OEM ISO
 
 1. Browse to [https://winworldpc.com/product/windows-98/98-second-edition](https://winworldpc.com/product/windows-98/98-second-edition), and download the Windows 98 SE OEM ISO
@@ -28,7 +32,7 @@ publishDate: 15 Aug 2020
 ## Create a Virtual Machine
 
 1. Run `qemu-img create -f qcow2 win98.cow 512M` to create the virtual hard drive
-1. Run `qemu-system-x86_64 -cdrom path/to/win98.iso -boot order=d -drive file=/path/to/win98.cow -m 512 -device sb16 -display sdl` to create and start the virtual machine
+1. Run `qemu-system-x86_64 -cdrom path/to/win98.iso -boot order=d -drive file=/path/to/win98.cow -m 512 -device sb16 -device adlib -display sdl` to create and start the virtual machine
 1. Select `Boot from CD-ROM`
 
     ![1](/images/posts/gaming-on-windows-98-with-qemu/1.png "1")
