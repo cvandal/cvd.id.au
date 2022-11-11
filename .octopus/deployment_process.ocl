@@ -5,7 +5,7 @@ step "hello-world" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "true"
-            Octopus.Action.Script.ScriptBody = "echo \"Hello World\""
+            Octopus.Action.Script.ScriptBody = "echo $(get_octopusvariable \"Message\")"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
