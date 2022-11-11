@@ -1,0 +1,3 @@
+variable "Message" {
+    value "Hello World" {}
+}
