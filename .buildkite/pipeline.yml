@@ -1,5 +1,0 @@
-steps:
-  - label: "Build"
-    command: "echo 'DO BUILD STUFF HERE'"
-  - label: "Deploy"
-    command: "echo 'DO DEPLOY STUFF HERE'"
